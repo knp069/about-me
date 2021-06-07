@@ -1,0 +1,79 @@
+@import "./colors";
+
+.menu {
+  position: absolute;
+  right: 4rem;
+  top: 3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+  @media only screen and(max-width: 800px) {
+    right: 2rem;
+    top: 1.5rem;
+    display: block;
+  }
+}
+.lines {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.line {
+  margin: 5px;
+  height: 5px;
+  width: 50px;
+  background-color: $background_dark;
+  transition: all 1s ease-in-out;
+  @media only screen and(max-width: 800px) {
+    margin: 3px;
+    height: 4px;
+    width: 35px;
+  }
+}
+
+.opened .line1 {
+  transform: translateY(15px) rotate(45deg);
+  transform-origin: 50% 50%;
+  @media only screen and(max-width: 800px) {
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+.opened .line2 {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.opened .line3 {
+  transform: translateY(-15px) rotate(-45deg);
+  transform-origin: 50% 50%;
+  @media only screen and(max-width: 800px) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+@keyframes cross-line1 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(1.2rem) rotate(0);
+  }
+  100% {
+    transform: translateY(1.2rem) rotate(45deg);
+  }
+}
+
+@keyframes cross-line3 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-1.2rem) rotate(0);
+  }
+  100% {
+    transform: translateY(-1.2rem) rotate(-45deg);
+  }
+}

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap");
+@import "./styles/fontawesome/scss/fontawesome.scss";
+@import "./styles/fontawesome/scss/solid.scss";
+@import "./styles/fontawesome/scss/brands.scss";
+@import "./styles/colors.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: none;
+  display: none;
+}
+
+body,
+html,
+#root {
+  scrollbar-width: none;
+  height: 100%;
+  width: 100%;
+  background-color: $background_light;
+  box-sizing: border-box;
+}

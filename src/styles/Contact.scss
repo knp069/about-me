@@ -1,0 +1,107 @@
+@import "./colors.scss";
+.contact_form {
+  box-sizing: border-box;
+  width: 60vh;
+  height: 60vw;
+  background: $background_dark;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 1rem;
+  transform: translate(-50%, -60%);
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  @media only screen and (max-width: 800px) {
+    position: absolute;
+    width: 95vw;
+    height: 75vh;
+    top: 50%;
+    left: 50%;
+    border-radius: 1rem;
+    transform: translate(-50%, -60%);
+    margin: 0 auto;
+  }
+}
+
+.contact_form div {
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px $background_light solid;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0.5rem;
+  color: $background_light;
+  font-size: 1.5rem;
+  font-family: "Source Code Pro";
+}
+
+.contact_form div:nth-child(1) {
+  margin-top: 1rem;
+}
+.contact_form div:nth-last-child(1) {
+  margin-bottom: 1rem;
+  border-bottom: none;
+}
+
+.from_input,
+.subject_input,
+.controls {
+  height: 3.5rem;
+}
+
+.message_input {
+  flex-grow: 1;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $background_light;
+  opacity: 0.6; /* Firefox */
+}
+
+.contact_form div input,
+.contact_form div textarea {
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  font-size: 1.25rem;
+  color: $background_light;
+}
+
+.contact_form div input:focus,
+.contact_form div textarea:focus {
+  outline: none;
+  border-bottom: 0.125rem $background_dark solid;
+}
+
+.contact_form div textarea {
+  resize: none;
+}
+
+.controls {
+  background: none;
+}
+
+.contact_form button {
+  border-radius: 0.5rem;
+  background-color: $background_light;
+  color: $background_dark;
+  padding: 0.5rem;
+  margin: 0 0.75rem;
+  text-transform: capitalize;
+  width: 8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.contact_form button:active {
+  box-shadow: inset 0 0 4px $background_dark;
+}

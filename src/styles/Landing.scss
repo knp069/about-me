@@ -1,0 +1,156 @@
+@import "./colors.scss";
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  height: 60vh;
+  width: 60vw;
+  min-width: 900px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @media only screen and(max-width: 1200px) {
+    justify-content: space-evenly;
+    width: 95vw;
+    min-width: 95vw;
+  }
+  @media only screen and(max-width: 1000px) {
+    justify-content: space-evenly;
+    width: 100vw;
+    min-width: 100vw;
+  }
+  @media only screen and(max-width: 800px) {
+    height: 80vh;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    min-width: 100vw;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+
+    .social {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row-reverse;
+      width: 100%;
+      ul.social-icon-list {
+        float: right;
+        display: flex;
+        opacity: 0;
+        align-items: flex-end;
+        justify-content: flex-end;
+        list-style: none;
+        font-size: 2rem;
+        transform: translateX(3rem);
+        animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+        li {
+          margin-left: 0.5rem;
+          color: $background_dark;
+        }
+      }
+    }
+  }
+  .right {
+    position: relative;
+    float: right;
+    background: $background_dark;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    img {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+}
+
+.heading {
+  position: relative;
+  float: right;
+  font-size: 5rem;
+  color: $background_dark;
+  width: max-content;
+  line-height: 100%;
+  font-family: "Roboto Mono", monospace;
+  position: relative;
+  @media only screen and(max-width: 800px) {
+    font-size: 3rem;
+  }
+}
+
+:root {
+  --typewriterSpeed: 2s;
+  --typewriterCharacters: 11;
+}
+
+.heading::before,
+.heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.heading::before {
+  background: $background_light;
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 0.5s forwards;
+}
+
+.heading::after {
+  width: 0.125em;
+  box-sizing: content-box;
+  background: $background_dark;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 0.5s forwards,
+    blink 725ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.subtitle {
+  position: relative;
+  float: right;
+  color: $background_dark;
+  font-size: 2rem;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  opacity: 0;
+  transform: translateX(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+  @media only screen and(max-width: 800px) {
+    font-size: 1rem;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
