@@ -1,21 +1,29 @@
 import React, { useState } from "react";
 import "../styles/HamburgerMenu.scss";
-const HamburgerMenu = () => {
-  const [opened, setOpened] = useState("");
-
+interface Props {
+  setMenuClass?: any;
+  setPageClass?: any;
+  setMenuButtonClass?: any;
+  menuButtonClass: string;
+}
+const HamburgerMenu = (props: Props) => {
   function toggleMenu() {
-    if (opened === "opened") {
-      setOpened("");
+    if (props.menuButtonClass === "opened") {
+      props.setMenuButtonClass("");
+      props.setMenuClass("");
+      props.setPageClass("");
     } else {
-      setOpened("opened");
+      props.setMenuButtonClass("opened");
+      props.setMenuClass("opened_menu");
+      props.setPageClass("inactive");
     }
   }
   return (
     <>
       <button
         onClick={toggleMenu}
-        className={`menu ${opened}`}
-        aria-label="Main Menu"
+        className={`ham_button ${props.menuButtonClass}`}
+        aria-label="Main ham_button"
       >
         <ul className="lines">
           <li className="line line1"></li>

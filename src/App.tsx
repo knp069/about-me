@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
 import Landing from "./components/Landing";
-import Particle from "./components/Particle";
+import HamburgerMenu from "./components/HamburgerMenu";
 import Menu from "./components/Menu";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
@@ -19,25 +19,42 @@ import {
 function App() {
   const location = useLocation();
   const [animate, setAnimate] = useState(true);
+  const [pageClass, setPageClass] = useState("");
+  const [menuClass, setMenuClass] = useState("");
+  const [menuButtonClass, setMenuButtonClass] = useState("");
   return (
     <div className="App">
-      <Menu />
+      <HamburgerMenu
+        setMenuClass={setMenuClass}
+        setPageClass={setPageClass}
+        menuButtonClass={menuButtonClass}
+        setMenuButtonClass={setMenuButtonClass}
+      />
+      <Menu
+        setMenuClass={setMenuClass}
+        setPageClass={setPageClass}
+        menuButtonClass={menuButtonClass}
+        setMenuButtonClass={setMenuButtonClass}
+        menuClass={menuClass}
+      />
       <Switch location={location}>
-        <Route exact path="/">
-          <Landing />
-        </Route>
-        <Route exact path="/skills">
-          <Skills />
-        </Route>
-        <Route exact path="/work">
-          <Work />
-        </Route>
-        <Route exact path="/projects">
-          <Projects />
-        </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
+        <div className={`page_container ${pageClass}`}>
+          <Route exact path="/">
+            <Landing />
+          </Route>
+          <Route exact path="/skills">
+            <Skills />
+          </Route>
+          <Route exact path="/work">
+            <Work />
+          </Route>
+          <Route exact path="/projects">
+            <Projects />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+        </div>
       </Switch>
     </div>
   );

@@ -1,33 +1,66 @@
 @import "./colors.scss";
+
+.contact {
+  position: relative;
+  height: 80%;
+  width: 90%;
+  margin: auto;
+  top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  @media only screen and(max-width: 800px) {
+    flex-direction: column;
+    min-height: 1000px;
+  }
+}
+
+.contact_heading {
+  width: 45%;
+  height: 100%;
+  background-color: transparent;
+  background: url("../images/contact_us.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @media only screen and (max-width: 800px) {
+    height: 40%;
+    width: 100%;
+  }
+}
+
+.contact_heading h1 {
+  position: relative;
+  font-family: "Open sans";
+  font-weight: 200;
+  font-size: 3rem;
+  top: 10%;
+  @media only screen and (max-width: 800px) {
+    text-align: center;
+    top: 10%;
+  }
+}
 .contact_form {
+  width: 45%;
+  margin: auto;
+  height: 80%;
   box-sizing: border-box;
-  width: 60%;
-  height: 60%;
-  background: $background_dark;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 1rem;
-  transform: translate(-50%, -60%);
+  background: $background_dark_alpha;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
+  box-shadow: -1px 17px 29px 3px rgba(61, 64, 91, 0.75);
 
   @media only screen and (max-width: 800px) {
-    position: absolute;
-    width: 95%;
-    height: 75%;
-    top: 5%;
-    left: 50%;
-    border-radius: 1rem;
-    transform: translateX(-50%);
-    margin: 0 auto;
+    width: 100%;
+    height: 50%;
   }
 }
 
 .contact_form div {
   box-sizing: border-box;
-  width: 100%;
   border-bottom: 1px $background_light solid;
   margin: 0.5rem 0;
   display: flex;
@@ -77,7 +110,6 @@
 .contact_form div input:focus,
 .contact_form div textarea:focus {
   outline: none;
-  border-bottom: 0.125rem $background_dark solid;
 }
 
 .contact_form div textarea {
@@ -89,7 +121,6 @@
 }
 
 .contact_form button {
-  border-radius: 0.5rem;
   background-color: $background_light;
   color: $background_dark;
   padding: 0.5rem;
