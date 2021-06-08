@@ -5,8 +5,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
-  height: 60vh;
-  width: 60vw;
+  height: 60%;
+  width: 60%;
   min-width: 900px;
   margin: auto;
   justify-content: center;
@@ -17,19 +17,19 @@
 
   @media only screen and(max-width: 1200px) {
     justify-content: space-evenly;
-    width: 95vw;
-    min-width: 95vw;
+    width: 95%;
+    min-width: 95%;
   }
   @media only screen and(max-width: 1000px) {
     justify-content: space-evenly;
-    width: 100vw;
-    min-width: 100vw;
+    width: 100%;
+    min-width: 100%;
   }
   @media only screen and(max-width: 800px) {
-    height: 80vh;
+    height: 80%;
     flex-direction: column-reverse;
     justify-content: space-evenly;
-    min-width: 100vw;
+    min-width: 100%;
   }
   .left {
     display: flex;

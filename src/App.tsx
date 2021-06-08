@@ -22,33 +22,23 @@ function App() {
   return (
     <div className="App">
       <Menu />
-      <TransitionGroup>
-        <CSSTransition
-          in={animate}
-          timeout={1000}
-          classNames="block"
-          key={location.key}
-          unmountOnExit
-        >
-          <Switch>
-            <Route exact path="/">
-              <Landing />
-            </Route>
-            <Route exact path="/skills">
-              <Skills />
-            </Route>
-            <Route exact path="/work">
-              <Work />
-            </Route>
-            <Route exact path="/projects">
-              <Projects />
-            </Route>
-            <Route exact path="/contact">
-              <Contact />
-            </Route>
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
+      <Switch location={location}>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+        <Route exact path="/skills">
+          <Skills />
+        </Route>
+        <Route exact path="/work">
+          <Work />
+        </Route>
+        <Route exact path="/projects">
+          <Projects />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
     </div>
   );
 }

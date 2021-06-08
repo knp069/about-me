@@ -1,8 +1,8 @@
 @import "./colors.scss";
 .contact_form {
   box-sizing: border-box;
-  width: 60vh;
-  height: 60vw;
+  width: 60%;
+  height: 60%;
   background: $background_dark;
   position: absolute;
   top: 50%;
@@ -15,12 +15,12 @@
 
   @media only screen and (max-width: 800px) {
     position: absolute;
-    width: 95vw;
-    height: 75vh;
-    top: 50%;
+    width: 95%;
+    height: 75%;
+    top: 5%;
     left: 50%;
     border-radius: 1rem;
-    transform: translate(-50%, -60%);
+    transform: translateX(-50%);
     margin: 0 auto;
   }
 }
