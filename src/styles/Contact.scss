@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   background: transparent;
-  @media only screen and(max-width: 800px) {
+  @media only screen and(max-width: 1000px) {
     flex-direction: column;
     min-height: 1000px;
   }
@@ -25,7 +25,7 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
     height: 40%;
     width: 100%;
   }
@@ -35,11 +35,10 @@
   position: relative;
   font-family: "Open sans";
   font-weight: 200;
-  font-size: 3rem;
+  font-size: 2.5rem;
   top: 10%;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
     text-align: center;
-    top: 10%;
   }
 }
 .contact_form {
@@ -53,7 +52,7 @@
   padding: 0 1rem;
   box-shadow: -1px 17px 29px 3px rgba(61, 64, 91, 0.75);
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
     width: 100%;
     height: 50%;
   }

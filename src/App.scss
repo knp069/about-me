@@ -12,7 +12,7 @@
   width: 100%;
   box-sizing: border-box;
 }
-
+  
 .page_container {
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -24,5 +24,5 @@
 .particles {
   z-index: -1;
   background-color: $background_light;
-  position: absolute;
+  position: fixed;
 }
