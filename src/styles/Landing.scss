@@ -50,11 +50,11 @@
         align-items: flex-end;
         justify-content: flex-end;
         list-style: none;
-        font-size: 2rem;
+        font-size: 2em;
         transform: translateX(3rem);
         animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
         li {
-          margin-left: 0.5rem;
+          margin-left: 0.5em;
           color: $background_dark;
         }
       }
@@ -82,14 +82,14 @@
 .heading {
   position: relative;
   float: right;
-  font-size: 5rem;
+  font-size: 5em;
   color: $background_dark;
   width: max-content;
   line-height: 100%;
   font-family: "Roboto Mono", monospace;
   position: relative;
   @media only screen and(max-width: 800px) {
-    font-size: 3rem;
+    font-size: 3em;
   }
 }
 
@@ -127,14 +127,14 @@
   position: relative;
   float: right;
   color: $background_dark;
-  font-size: 2rem;
+  font-size: 2em;
   font-family: "Source Code Pro", monospace;
   position: relative;
   opacity: 0;
   transform: translateX(3rem);
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
   @media only screen and(max-width: 800px) {
-    font-size: 1rem;
+    font-size: 1em;
   }
 }
 

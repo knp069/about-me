@@ -7,18 +7,17 @@
   top: 50%;
   box-sizing: border-box;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 1em;
   color: $background_light;
   background-color: $background_dark;
   display: flex;
   height: fit-content;
   width: fit-content;
-  padding: 2rem;
-  border-radius: 2rem;
+  padding: 1em;
+  border-radius: 1em;
   transition: left 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   @media only screen and(max-width: 800px) {
-    font-size: 3rem;
-    padding: 1rem;
+    padding: 1em;
   }
 }
 .menu_box.opened_menu {
@@ -36,26 +35,26 @@
   align-items: center;
 
   li {
-    padding: 0.5rem;
+    padding: 0.5em;
     box-sizing: border-box;
-    margin-right: 2rem;
+    margin-right: 2em;
   }
 
   li i {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     vertical-align: middle;
   }
 
   li span {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-family: "Source Code Pro";
     text-transform: uppercase;
-    padding: 0.5rem;
+    padding: 0.5em;
     vertical-align: middle;
   }
 
   li:nth-last-of-type(1) {
-    margin-right: 0rem;
+    margin-right: 0em;
   }
   li:hover {
     transform: scale(1.2);

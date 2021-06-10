@@ -57,7 +57,7 @@ const Skills = () => {
                   </div>
                   <div className="logo_holder">
                     <i className="devicon-spring-plain"></i>
-                    <h3>spring boot</h3>
+                    <h3>spring</h3>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ const Skills = () => {
                   </div>
                   <div className="logo_holder">
                     <i className="devicon-googlecloud-plain"></i>
-                    <h3>google cloud</h3>
+                    <h3>gcp</h3>
                   </div>
                   <div className="logo_holder">
                     <i className="devicon-git-plain"></i>
