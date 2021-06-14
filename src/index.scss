@@ -1,11 +1,17 @@
+// import fonts
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+// font-awesome imports
 @import "./styles/fontawesome/scss/fontawesome.scss";
 @import "./styles/fontawesome/scss/solid.scss";
 @import "./styles/fontawesome/scss/brands.scss";
+
+//colors import
 @import "./styles/colors.scss";
+
+//dev-icons import
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css");
 
 * {
@@ -13,29 +19,23 @@
   padding: 0;
 }
 
-::-webkit-scrollbar {
-  width: none;
-  display: none;
-}
-
 body,
 html,
 #root {
-  scrollbar-width: none;
   height: 100%;
   width: 100%;
   background-color: transparent;
   box-sizing: border-box;
   font-size: 16px;
 
-  @media only screen and(max-width: 1400) {
+  @media only screen and(max-width: 1400px) {
     font-size: 14px;
   }
 
-  @media only screen and(max-width: 1000) {
+  @media only screen and(max-width: 1000px) {
     font-size: 12px;
   }
-  @media only screen and(max-width: 800) {
+  @media only screen and(max-width: 800px) {
     font-size: 10px;
   }
 }

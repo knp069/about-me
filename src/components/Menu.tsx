@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Menu.scss";
+import HamburgerMenu from "./HamburgerMenu";
 
 interface Props {
   setMenuClass?: any;
@@ -9,6 +10,7 @@ interface Props {
   setMenuButtonClass?: any;
   menuButtonClass: string;
 }
+
 const Menu = (props: Props) => {
   function toggleClass() {
     if (props.menuButtonClass === "opened") {
@@ -21,6 +23,7 @@ const Menu = (props: Props) => {
       props.setPageClass("inactive");
     }
   }
+
   return (
     <>
       <div onClick={toggleClass} className={`menu_box ${props.menuClass}`}>
@@ -56,6 +59,12 @@ const Menu = (props: Props) => {
             </Link>
           </li>
         </ul>
+        <HamburgerMenu
+          setMenuClass={props.setMenuClass}
+          setPageClass={props.setPageClass}
+          menuButtonClass={props.menuButtonClass}
+          setMenuButtonClass={props.setMenuButtonClass}
+        />
       </div>
     </>
   );

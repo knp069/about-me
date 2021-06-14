@@ -50,6 +50,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 1em;
+  border-radius: 1rem;
   box-shadow: -1px 17px 29px 3px rgba(61, 64, 91, 0.75);
 
   @media only screen and (max-width: 1000px) {
@@ -81,7 +82,7 @@
 .from_input,
 .subject_input,
 .controls {
-  height: 3.5em;
+  height: 3.5rem;
 }
 
 .message_input {
@@ -102,7 +103,7 @@
   height: 100%;
   width: 100%;
   flex-grow: 1;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   color: $background_light;
 }
 
@@ -122,14 +123,15 @@
 .contact_form button {
   background-color: $background_light;
   color: $background_dark;
-  padding: 0.5em;
-  margin: 0 0.75em;
   text-transform: capitalize;
-  width: 8em;
+  padding: 0.5em 1.5em;
   font-size: 1em;
   font-weight: 700;
   outline: none;
   border: none;
+  font-family: "Open Sans";
+  height: fit-content;
+  border-radius: 0.5rem;
 }
 
 .contact_form button:active {

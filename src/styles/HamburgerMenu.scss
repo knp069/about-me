@@ -1,19 +1,20 @@
 @import "./colors";
 
 .ham_button {
-  position: fixed;
   right: 2.5%;
   top: 5%;
   background-color: transparent;
   cursor: pointer;
   border: none;
   z-index: 10;
+  display: none;
   @media only screen and(max-width: 800px) {
     right: 4%;
     top: 2.5%;
     display: block;
   }
 }
+
 .lines {
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@
   margin: 5px;
   height: 5px;
   width: 50px;
-  background-color: $background_dark;
+  background-color: $background_light;
   transition: all 1s ease-in-out;
 }
 
@@ -32,6 +33,7 @@
   transform: translateY(15px) rotate(45deg);
   transform-origin: 50% 50%;
 }
+
 .opened .line2 {
   opacity: 0;
   transform: translateX(-100%);

@@ -9,7 +9,6 @@
   width: 60%;
   min-width: 900px;
   margin: auto;
-  justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -33,6 +32,7 @@
     min-width: 100%;
     max-width: 100%;
   }
+
   .left {
     display: flex;
     flex-direction: column;
@@ -43,6 +43,7 @@
       align-items: flex-end;
       flex-direction: row-reverse;
       width: 100%;
+
       ul.social-icon-list {
         float: right;
         display: flex;
@@ -53,13 +54,19 @@
         font-size: 2em;
         transform: translateX(3rem);
         animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+
         li {
           margin-left: 0.5em;
           color: $background_dark;
+
+          a {
+            color: $background_dark;
+          }
         }
       }
     }
   }
+
   .right {
     position: relative;
     float: right;
@@ -69,6 +76,7 @@
     height: 200px;
     min-width: 200px;
     min-height: 200px;
+
     img {
       width: 80%;
       position: absolute;
@@ -110,17 +118,15 @@
 
 .heading::before {
   background: $background_light;
-  animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 0.5s forwards;
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 0.5s forwards;
 }
 
 .heading::after {
   width: 0.125em;
   box-sizing: content-box;
   background: $background_dark;
-  animation: typewriter var(--typewriterSpeed)
-      steps(var(--typewriterCharacters)) 0.5s forwards,
-    blink 725ms steps(var(--typewriterCharacters)) infinite;
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 0.5s forwards,
+  blink 725ms steps(var(--typewriterCharacters)) infinite;
 }
 
 .subtitle {
